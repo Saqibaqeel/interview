@@ -9,6 +9,7 @@ import SecuritySection from './componenet/SecuritySection'
 import Fotter from './componenet/Fotter'
 import Faqs from './componenet/Faqs'
 import Feature from './componenet/Feature'
+import Banner from './componenet/Banner'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <SearchBox />/
       <Card />
     <SecuritySection />
+    <Banner />
     <Feature />
     <Faqs/>
     <Fotter />

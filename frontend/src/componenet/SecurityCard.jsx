@@ -1,6 +1,5 @@
 import React from "react";
 
-// Data array for all cards
 const leftCards = [
   {
     title: "Security",
@@ -30,21 +29,18 @@ const rightCards = [
 function SecurityCard() {
   return (
     <div className="container py-5">
-      <div className="row g-4">
+      <div className="row gy-4">
         <div className="col-12 col-lg-8">
-          <div className="row h-100">
+          <div className="row">
             {/* Left Cards */}
             <div className="col-12 col-md-8">
-              <div className="row h-100">
+              <div className="row g-3">
                 {leftCards.map((card, idx) => (
-                  <div className="col-6 mb-3 d-flex" key={idx}>
-                    <div className="card border rounded-3 p-3 w-100 h-100">
+                  <div className="col-12 col-sm-6" key={idx}>
+                    <div className="card h-100 border rounded-3 p-3">
                       <div className="card-body d-flex justify-content-between align-items-start">
                         <div>
-                          <i
-                            className={`${card.icon} text-dark mb-3`}
-                            style={{ fontSize: "1.5rem" }}
-                          ></i>
+                          <i className={`${card.icon} text-dark mb-3`} style={{ fontSize: "1.5rem" }}></i>
                           <h6 className="fw-semibold mb-2">{card.title}</h6>
                           <p className="text-muted small mb-0">{card.desc}</p>
                         </div>
@@ -57,30 +53,26 @@ function SecurityCard() {
             </div>
 
             {/* Right Cards */}
-            <div className="col-12 col-md-4 d-flex flex-column">
-              {rightCards.map((card, idx) => (
-                <div
-                  className={`card border rounded-3 p-3 ${idx === 0 ? "mb-3" : ""} flex-fill`}
-                  key={idx}
-                >
-                  <div className="card-body d-flex justify-content-between align-items-start">
-                    <div>
-                      <i
-                        className={`${card.icon} text-dark mb-3`}
-                        style={{ fontSize: "1.5rem" }}
-                      ></i>
-                      <h6 className="fw-semibold mb-2">{card.title}</h6>
-                      <p className="text-muted small mb-0">{card.desc}</p>
+            <div className="col-12 col-md-4">
+              <div className="d-flex flex-column gap-3 h-100">
+                {rightCards.map((card, idx) => (
+                  <div className="card flex-fill border rounded-3 p-3" key={idx}>
+                    <div className="card-body d-flex justify-content-between align-items-start">
+                      <div>
+                        <i className={`${card.icon} text-dark mb-3`} style={{ fontSize: "1.5rem" }}></i>
+                        <h6 className="fw-semibold mb-2">{card.title}</h6>
+                        <p className="text-muted small mb-0">{card.desc}</p>
+                      </div>
+                      <i className="fas fa-arrow-right text-muted"></i>
                     </div>
-                    <i className="fas fa-arrow-right text-muted"></i>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Right Spacer */}
+        {/* Right spacer for layout symmetry */}
         <div className="col-12 col-lg-4"></div>
       </div>
     </div>
