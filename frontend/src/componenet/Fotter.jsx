@@ -2,39 +2,43 @@ import React from 'react';
 
 const Fotter = () => {
   return (
-    <footer className="py-5" style={{ backgroundColor: '#2f3134', color: '#b0b0b0' }}> {/* Dark background, light grey text */}
+    // Main footer section with dark background and light gray text color
+    <footer className="py-5" style={{ backgroundColor: '#2f3134', color: '#b0b0b0' }}>
       <div className="container">
+        {/* Top row of the footer with multiple columns */}
         <div className="row">
-          {/* Logo and Social Media */}
+          {/* Main Left Column: Contains Logo, Social Media, AND Hire better & faster */}
           <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
-            <h3 className="mb-4" style={{ color: '#fff' }}>intervue<span style={{ color: '#f7d353' }}>9</span></h3> {/* intervue9 logo */}
-            <ul className="list-unstyled d-flex">
+            {/* Logo */}
+            <h3 className="mb-4" style={{ color: '#fff' }}>intervue<span style={{ color: '#f7d353' }}>9</span></h3>
+
+            {/* Social Media Links */}
+            <ul className="list-unstyled d-flex mb-4"> {/* Added mb-4 for margin below social media links */}
               <li className="me-3"><a href="#facebook" className="text-decoration-none" style={{ color: '#b0b0b0' }}>Facebook</a></li>
               <li className="me-3"><a href="#instagram" className="text-decoration-none" style={{ color: '#b0b0b0' }}>Instagram</a></li>
               <li className="me-3"><a href="#linkedin" className="text-decoration-none" style={{ color: '#b0b0b0' }}>LinkedIn</a></li>
               <li><a href="#pinterest" className="text-decoration-none" style={{ color: '#b0b0b0' }}>Pinterest</a></li>
             </ul>
-          </div>
 
-          {/* Hire better & faster section */}
-          <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            {/* "Hire better & faster" section with email input  */}
             <h5 className="mb-3" style={{ color: '#f7d353' }}>Hire better & faster</h5> {/* Yellowish text */}
-            <div className="input-group mb-3" style={{ borderBottom: '1px solid #b0b0b0' }}> {/* Underlined input */}
-              <input
-                type="email"
-                className="form-control bg-transparent border-0 ps-0"
-                placeholder="Enter your email address"
-                aria-label="Enter your email address"
-                style={{ color: '#fff', borderBottom: 'none' }} // Ensure no internal input border
-              />
-              <button className="btn btn-link p-0" type="button" style={{ color: '#f7d353' }}>
-                <i className="fas fa-arrow-right"></i> {/* Font Awesome arrow icon */}
-              </button>
-            </div>
+            <div className="input-group mb-3" style={{ borderBottom: '1px solid white' }}>
+  <input
+    type="email"
+    className="form-control bg-transparent border-0 ps-0"
+    placeholder="Enter your email address"
+    aria-label="Enter your email address"
+    style={{ color: '#fff', borderBottom: 'none' }}
+  />
+  <button className="btn btn-link p-0" type="button" style={{ color: '#f7d353' }}>
+    <i className="fas fa-arrow-right"></i>
+  </button>
+</div>
+
           </div>
 
-          {/* Navigation Links */}
-          <div className="col-lg-2 col-md-4 mb-3 mb-md-0">
+          {/* Company Navigation Links (This is now effectively the second main column) */}
+          <div className="col-lg-2 col-md-4 mb-3 mb-md-0 offset-lg-1"> {/* Added offset-lg-1 for visual spacing if needed to match image */}
             <h5 className="mb-3" style={{ color: '#fff' }}>Company</h5>
             <ul className="list-unstyled">
               <li className="mb-2"><a href="#sogehts" className="text-decoration-none" style={{ color: '#b0b0b0' }}>So gehts</a></li>
@@ -45,6 +49,7 @@ const Fotter = () => {
             </ul>
           </div>
 
+          {/* Resources Navigation Links */}
           <div className="col-lg-2 col-md-4 mb-3 mb-md-0">
             <h5 className="mb-3" style={{ color: '#fff' }}>Resources</h5>
             <ul className="list-unstyled">
@@ -56,8 +61,9 @@ const Fotter = () => {
             </ul>
           </div>
 
+          {/* Product Navigation Links (repeated based on your image) */}
           <div className="col-lg-2 col-md-4">
-            <h5 className="mb-3" style={{ color: '#fff' }}>Product</h5> {/* Note: Your image shows "Product" twice, I'll replicate that */}
+            <h5 className="mb-3" style={{ color: '#fff' }}>Product</h5>
             <ul className="list-unstyled">
               <li className="mb-2"><a href="#blog" className="text-decoration-none" style={{ color: '#b0b0b0' }}>Blog</a></li>
               <li className="mb-2"><a href="#faq" className="text-decoration-none" style={{ color: '#b0b0b0' }}>FAQ</a></li>
@@ -68,9 +74,10 @@ const Fotter = () => {
           </div>
         </div>
 
-        {/* Copyright and Legal Links */}
-        <hr className="my-5" style={{ borderColor: '#4a4d50' }} /> {/* Separator line */}
+        {/* Separator line */}
+        <hr className="my-5" style={{ borderColor: '#4a4d50' }} />
 
+        {/* Copyright and Legal Links */}
         <div className="row text-center text-md-start">
           <div className="col-md-6 mb-3 mb-md-0">
             <p className="mb-0">&copy; 2023 Intervue. Crafted by great minds.</p>

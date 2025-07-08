@@ -10,3 +10,7 @@ p ,li{
 body {
   padding-top: 90px; /* adjust as needed */
 }
+input::placeholder {
+  color: white;
+  opacity: 1; /* Makes sure it's fully visible */
+}
