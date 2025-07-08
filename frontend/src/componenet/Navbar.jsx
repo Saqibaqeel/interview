@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light  mb-4 container ">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4 container p-3 rounded-2 fixed-top"> {/* ⬅️ Added fixed-top here */}
       <div className="container-fluid">
         {/* Brand / Logo on the left */}
         <a className="navbar-brand" href="#">
