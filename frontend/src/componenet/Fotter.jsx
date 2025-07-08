@@ -10,7 +10,7 @@ const Fotter = () => {
           {/* Main Left Column: Contains Logo, Social Media, AND Hire better & faster */}
           <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
             {/* Logo */}
-            <h3 className="mb-4" style={{ color: '#fff' }}>intervue<span style={{ color: '#f7d353' }}>9</span></h3>
+            <h3 className="mb-4" style={{ color: '#fff' }}>intervue</h3>
 
             {/* Social Media Links */}
             <ul className="list-unstyled d-flex mb-4"> {/* Added mb-4 for margin below social media links */}
